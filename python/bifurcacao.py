@@ -10,9 +10,11 @@
 #*/
 import matplotlib.pyplot as plt
 import numpy as np
-
+from time import time
 def main():
-	f=eval("lambda a,x:"+raw_input("digite a função.\nexemplo: 'a*x*(1-x)'\nf(a,x) := "))#criamos uma função anonima 'f' e executamos o texto passado como código
+	t1=time()
+	#f=eval("lambda a,x:"+raw_input("digite a função.\nexemplo: 'a*x*(1-x)'\nf(a,x) := "))#criamos uma função anonima 'f' e executamos o texto passado como código
+	f=lambda a,x: a*x*(1-x)
 	x0,A,X=0.12345,[],[]
 	for a in np.linspace(0,4,1000):#a variando de 0 a 4 dividido em 1000 espaços
 		x=x0
@@ -23,9 +25,10 @@ def main():
 			A.append(a)
 			X.append(x)
 	plt.plot(A,X,'b.',markersize=0.5)
-	plt.savefig("bifurcação.png",format='png')
+	#plt.savefig("bifurcação.png",format='png')
+	t2=time()
+	print str(t2-t1),' segundos'
 	plt.show()
-
 	#print f(4,0.5)
 
 if __name__ == '__main__':
