@@ -3,6 +3,8 @@ dnlcaos
 
 programas para a potagem de gráfico para a aula de Dinâmica Não-Linear e Caos da UFABC
 
+resultados (coffeescript)
+[Site](http://lvspais.herokuapp.com/#dnlcaos)
 resultados (programa em python)
 ![Xn x iteração](https://raw.github.com/lvspais/dnlcaos/master/teste1.png)
 ![cobweb](https://raw.github.com/lvspais/dnlcaos/master/cobweb_plot.png)
