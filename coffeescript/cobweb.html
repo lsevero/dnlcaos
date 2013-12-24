@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<meta charset='utf-8'>
+	<head>
+		<style type="text/css">
+			body {
+				text-align:center;
+				margin: 0px;
+				padding: 0px;
+			}
+			#container {
+				width : 40em;
+				height: 30em;
+				margin: 8px auto;
+			}
+		</style>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript"
+			src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		</head>
+		<body>
+			<h1 id="heading">\[\text{Cobweb Plot}\]</h1>
+			<a href="https://github.com/lvspais/dnlcaos"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+			<p>\[X_{n+1} = aX_{n}(1-X_{n})\]</p>
+			\(X_0 = \)<input type="text" name="x0" value="0.12345" id="x0"><br>
+			\(a = \)<input type="text" name="a" value="4" id="a"><br>
+			<button name="botao" onclick="cobweb();">Gera gráfico</button>
+			<div id="container"></div>
+			<script type="text/javascript" src="flotr2.min.js"></script>
+			<script type="text/javascript" src="cobweb_estatico.js"></script>
+			<footer>Criado por Lucas Severo</footer>
+		</body>
+	</html>

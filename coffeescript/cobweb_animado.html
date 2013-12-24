@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<meta charset='utf-8'>
+	<head>
+		<style type="text/css">
+			body {
+				text-align:center;
+				margin: 0px;
+				padding: 0px;
+			}
+			#container {
+				width : 40em;
+				height: 30em;
+				margin: 8px auto;
+			}
+		</style>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript"
+			src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		</head>
+		<body>
+			<h1 id="heading">\[\text{Cobweb Plot animado}\]</h1>
+			<a href="https://github.com/lvspais/dnlcaos"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+			<p>\[X_{n+1} = aX_{n}(1-X_{n})\]</p>
+			\(X_0 = \)<input type="text" name="x0" value="0.12345" id="x0"><br>
+			\(a_{passo} = \)<input type="text" name="apasso" value="0.05" id="apasso">
+			\(a_{min} = \)<input type="text" name="amin" value="0" id="amin" onchange="set_default();"><br>
+			\(a_{máx} = \)<input type="text" name="amax" value="4" id="amax" onchange="set_default();">
+			\(\text{tempo (ms)}\)<input type="text" name="tempo" value="75" id="tempo"><br>
+			<!--\(a = \)<input type="text" name="a" value="4" id="a"><br>-->
+			<!--<button name="botao" onclick="running=true;animate();">Gera animação</button>-->
+			<button name="pause" id='pause' onclick="toggle();">Play</button>
+			<button name="reset" id='reset' onclick="set_default();">Reset</button>
+			<div id="container"></div>
+			<script type="text/javascript" src="flotr2.min.js"></script>
+			<script type="text/javascript" src="cobweb_animado.js"></script>
+			<footer>Criado por Lucas Severo</footer>
+		</body>
+	</html>
