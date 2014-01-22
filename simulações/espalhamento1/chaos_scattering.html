@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<style>
+			@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
+			*{
+				text-align:center;
+				font-family: 'Alegreya Sans SC', sans-serif;
+			}
+			/*h1,h3,button,select,p,footer{
+			text-align:center;
+			font-family: 'Alegreya Sans SC', sans-serif;
+			}*/
+			input{
+				width:100px;
+				text-align:left;
+			}
+			#cr-stage {
+				margin: 0px auto;
+				background:gray;
+				width: 600px;
+				height: 600px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="simplegrid.css" />
+	</head>
+	<body>
+		<script type="text/javascript" src="crafty-min.js"></script>
+		<script type="text/javascript" src="chaos_scattering.js"></script>
+		<div class="grid">
+			<h1 id="heading" class="col-1-1">Espalhamento Caótico</h1>
+		</div>
+		<div class="grid">
+			<div class="col-1-12">
+				<img src="images/azul10.png">
+			</div>
+			<div class="col-2-12">
+				vX:<input type="text" name="vxblue" value="2" id="vxblue" placeholder="velocidade X">
+			</div>
+			<div class="col-2-12">
+				vY:<input type="text" name="vyblue" value="2" id="vyblue" placeholder="velocidade Y">
+			</div>
+			<div class="col-2-12">
+				X:<input type="text" name="xblue" value="55" id="xblue" placeholder="posição X">
+			</div>
+			<div class="col-2-12">
+				Y:<input type="text" name="yblue" value="40" id="yblue" placeholder="posição Y">
+			</div>
+		</div>
+		<div class="grid">
+			<div class="col-1-12">
+				<img src="images/vermelho10.png">
+			</div>
+			<div class="col-2-12">
+				vX:<input type="text" name="vxred" value="2" id="vxred" placeholder="velocidade X">
+			</div>
+			<div class="col-2-12">
+				vY:<input type="text" name="vyred" value="2" id="vyred" placeholder="velocidade Y">
+			</div>
+			<div class="col-2-12">
+				X:<input type="text" name="xred" value="45" id="xred" placeholder="posição X">
+			</div>
+			<div class="col-2-12">
+				Y:<input type="text" name="yred" value="40" id="yred" placeholder="posição Y">
+			</div>
+		</div>
+		<div class="grid">
+			<div class="col-1-2">
+				<button name="pause" onclick="Crafty.pause();">Pause</button>
+			</div>
+			<div class="col-1-2">
+				<button name="reset" onclick="reset();">Reset</button>
+			</div>
+		</div>
+		<div class="grid">
+			<div id="cr-stage" class="col-1-1">
+				<!-- cratfy code takes effect here -->
+			</div>
+		</div>
+		<footer>Criado por Lucas Severo</footer>
+	</body>
+</html>
